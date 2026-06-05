@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuMind AI | PDF Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="DocuMind Logo" class="main-logo">
+        </div>
+        <h1>DocuMind AI</h1>
+        <p class="subtitle">Upload your PDF and chat with its contents instantly.</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <div class="drop-zone" id="drop-zone">
+                <div class="icon-box">📄</div>
+                <h3>Drop your PDF here</h3>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">or click to browse files</p>
+                <input type="file" id="file-input" accept=".pdf" style="display: none;">
+            </div>
+            <div class="file-info" id="file-info">
+                <p id="file-name" style="font-weight: 600; margin-bottom: 0.25rem;"></p>
+                <p id="file-size" style="font-size: 0.85rem; color: var(--text-secondary);"></p>
+            </div>
+        </section>
+
+        <section class="chat-section">
+            <div class="chat-container">
+                <div class="messages" id="chat-messages">
+                    <div class="message ai">
+                        Hello! Upload a PDF to get started. I can help you summarize the document or answer specific questions about it.
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="user-input" placeholder="Ask a question about your PDF..." disabled>
+                    <button class="send-btn" id="send-btn" disabled>
+                        <span>Send</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
