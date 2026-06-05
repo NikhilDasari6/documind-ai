@@ -232,4 +232,47 @@ button.send-btn:disabled {
     main {
         grid-template-columns: 1fr;
     }
+}/* Message Content Styling (Markdown) */
+.message pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.message code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: #61afef;
+}
+
+.message table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.message th, .message td {
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.message th {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.message ul, .message ol {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.message p {
+    margin-bottom: 0.5rem;
+}
+
+.message p:last-child {
+    margin-bottom: 0;
 }
