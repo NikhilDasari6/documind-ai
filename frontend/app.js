@@ -51,7 +51,7 @@ async function handleFile(file) {
     formData.append('pdf', file);
 
     try {
-        const response = await fetch('http://localhost:5000/api/upload', {
+        const response = await fetch('/api/upload', {
             method: 'POST',
             body: formData
         });
@@ -102,7 +102,7 @@ async function handleSendMessage() {
 
     // --- REAL BACKEND INTEGRATION ---
     try {
-        const response = await fetch('http://localhost:5000/api/ask', {
+        const response = await fetch('/api/ask', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question: text })
