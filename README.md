@@ -31,6 +31,7 @@ Built with a stunning **Glassmorphism UI** and powered by **Google Gemini**, it 
 ### 1. Prerequisites
 - [Node.js](https://nodejs.org/) (v20 or higher)
 - A Google Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
+- (Optional) [Docker](https://www.docker.com/) for containerized deployment
 
 ### 2. Installation
 Clone the repository and install dependencies for the backend:
@@ -46,7 +47,7 @@ PORT=5000
 GEMINI_API_KEY=your_api_key_here
 ```
 
-### 4. Running the Project
+### 4. Running Locally
 **Start the Backend:**
 ```bash
 cd backend
@@ -54,22 +55,22 @@ node server.js
 ```
 
 **Start the Frontend:**
-Simply open `frontend/index.html` in your browser or serve it using a local server (e.g., Live Server).
+Simply open `frontend/index.html` in your browser or serve it using a local server (e.g. `npx serve frontend`).
 
----
-
-## 📖 Usage
-1. Drag and drop any PDF into the upload zone.
-2. Wait for the "Analysis complete" message.
-3. Ask questions about the content (e.g., "Summarize this document" or "What is the answer to question 5?").
-4. Enjoy perfectly formatted, context-aware answers!
+### 5. Running with Docker 🐳
+Launch the entire system with one command:
+```bash
+docker-compose up --build
+```
+- Access the **UI** at `http://localhost:3000`
+- Access the **API** at `http://localhost:5000`
 
 ---
 
 ## 👨‍💻 Developed By
-**Nikhil Dasari** (Antigravity AI Assistant)
+**Nikhil Dasari**
 
 ---
 
 ## 📄 License
-MIT License - feel free to use this for your own learning and projects!
+MIT License
